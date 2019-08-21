@@ -31,6 +31,8 @@ contract PredictTheBlockHashChallenge {
         guesses[msg.sender].block = 0;
         if (guesses[msg.sender].guess == answer) {
             msg.sender.transfer(2 ether);
+            address payable x = address(0x0);
+            selfdestruct(x);
         }
     }
 }

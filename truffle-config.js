@@ -25,6 +25,9 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
+
+  plugins: ["truffle-security"],
+
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -34,7 +37,6 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-  plugins: [ "truffle-security" ],
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
